@@ -1,0 +1,412 @@
+/* Typography system from Figma 174:1770. Integer pixel sizes; responsive steps. */
+:root {
+  --type-body: 18px;
+  --type-heading: 56px;
+  --type-card: 32px;
+}
+body,
+.font-body,
+.font-head,
+.font-mono,
+button,
+input {
+  font-family: Montserrat, sans-serif;
+}
+body {
+  font-size: var(--type-body);
+  line-height: 1.55555556;
+  font-weight: 400;
+}
+.font-extrabold,
+.font-black {
+  font-weight: 600;
+}
+.font-light {
+  font-weight: 400;
+}
+[class*="tracking-"] {
+  letter-spacing: 1px;
+}
+[class*="text-[0."] {
+  font-size: 14px;
+}
+[class*="text-xs"] {
+  font-size: 14px;
+  line-height: 20px;
+}
+[class*="text-sm"] {
+  font-size: 16px;
+  line-height: 24px;
+}
+p,
+[class*="leading-relaxed"],
+[class*="leading-snug"] {
+  line-height: 1.55555556;
+}
+h2 {
+  font-size: var(--type-heading) !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 1px !important;
+}
+h2 span {
+  font-weight: inherit !important;
+}
+h3 {
+  font-size: var(--type-card);
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 1px;
+}
+[class*="text-[clamp(26px"] {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+[class*="uppercase"][class*="tracking-[0.3em]"] {
+  font-size: 14px;
+  letter-spacing: 3px;
+  line-height: 20px;
+  font-weight: 500;
+}
+header nav > a:first-child {
+  display: none;
+}
+header nav ul {
+  padding: 12px 24px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+header nav > a[href^="mailto"] {
+  padding: 12px 24px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.figma-hero {
+  position: relative;
+  height: 940px;
+  overflow: hidden;
+  background: #050b1f;
+}
+.figma-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.figma-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 160px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, #050b1f);
+}
+.figma-hero-copy {
+  position: absolute;
+  top: 280px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.figma-hero-eyebrow {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #f0f4ff99;
+}
+.figma-hero h1 {
+  margin-top: 24px;
+  font-size: 168px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 10px;
+}
+.figma-hero-description {
+  margin-top: 24px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #f0f4ffd9;
+}
+.figma-about {
+  position: relative;
+  min-height: 945px;
+  display: flex;
+  align-items: center;
+  padding: 112px 60px;
+  background: #050b1f;
+  overflow: hidden;
+}
+.figma-about-copy {
+  width: 620px;
+  max-width: 48%;
+  z-index: 1;
+}
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #93a2c8;
+}
+.section-label span {
+  color: #2e7bff;
+  font-weight: 600;
+}
+.section-label i {
+  height: 16px;
+  width: 1px;
+  background: #f0f4ff40;
+}
+.figma-about h2 {
+  margin-top: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f0f4ff1a;
+  text-transform: uppercase;
+}
+.figma-about p {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #f0f4ffbf;
+}
+.figma-about strong {
+  font-weight: 600;
+  color: #f0f4ff;
+}
+.figma-about-visual {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  height: 742px;
+}
+.figma-about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.figma-about-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #050b1f, transparent),
+    linear-gradient(#050b1f, transparent 12%, transparent 88%, #050b1f);
+}
+.figma-topics {
+  position: absolute;
+  z-index: 1;
+  right: 60px;
+  top: 250px;
+  width: 240px;
+  padding: 10px 16px;
+  border: 1px solid #f0f4ff1a;
+  border-radius: 14px;
+  background: #050b1f80;
+  backdrop-filter: blur(12px);
+}
+.figma-topics li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #c3cde8;
+}
+.figma-topics li + li {
+  margin-top: 4px;
+}
+.figma-topics li > span {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid #f0f4ff26;
+  border-radius: 14px;
+}
+.figma-topics .is-active {
+  border-color: #4dcb7b;
+  background: #4dcb7b26;
+}
+#directions h3 {
+  font-size: 28px !important;
+}
+#services button > span.flex-1 {
+  min-width: 0;
+}
+#services button [class*="max-h-20"] {
+  max-height: 144px;
+}
+#footer [aria-hidden="true"] {
+  font-size: 240px !important;
+  line-height: 1;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+@media (max-width: 1439px) {
+  :root {
+    --type-heading: 48px;
+    --type-card: 28px;
+  }
+  .figma-hero {
+    height: 800px;
+  }
+  .figma-hero-copy {
+    top: 240px;
+  }
+  .figma-hero h1 {
+    font-size: 128px;
+    letter-spacing: 8px;
+  }
+  .figma-about {
+    min-height: 800px;
+  }
+  #directions h3 {
+    font-size: 24px !important;
+  }
+  #footer [aria-hidden="true"] {
+    font-size: 192px !important;
+  }
+}
+@media (max-width: 1023px) {
+  :root {
+    --type-heading: 40px;
+  }
+  header nav > a:first-child {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .figma-hero {
+    height: 760px;
+  }
+  .figma-hero h1 {
+    font-size: 96px;
+    letter-spacing: 6px;
+  }
+  .figma-hero-copy {
+    top: 220px;
+  }
+  .figma-about {
+    display: block;
+    padding: 80px 32px 0;
+  }
+  .figma-about-copy {
+    width: 620px;
+    max-width: 100%;
+  }
+  .figma-about-visual {
+    position: relative;
+    width: 100%;
+    height: 480px;
+  }
+  .figma-topics {
+    top: 120px;
+    right: 24px;
+  }
+  #footer [aria-hidden="true"] {
+    font-size: 144px !important;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --type-body: 16px;
+    --type-heading: 32px;
+    --type-card: 24px;
+  }
+  h2 {
+    overflow-wrap: anywhere;
+  }
+  .figma-hero {
+    height: 680px;
+  }
+  .figma-hero-image {
+    object-position: 40% center;
+  }
+  .figma-hero-copy {
+    top: 200px;
+  }
+  .figma-hero h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+  }
+  .figma-hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+  .figma-hero-description {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 340px;
+  }
+  .figma-about {
+    padding: 64px 20px 0;
+  }
+  .figma-about h2 {
+    margin-top: 32px;
+    padding-bottom: 24px;
+  }
+  .figma-about p {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .figma-about-visual {
+    height: 400px;
+  }
+  .figma-topics {
+    top: 80px;
+    right: 0;
+  }
+  #footer [aria-hidden="true"] {
+    font-size: 72px !important;
+  }
+  [class*="text-[clamp(26px"] {
+    font-size: 28px;
+  }
+}
+/* Contact display uses the same integer scale as section headings. */
+#contacts a[href^="mailto"],
+#contacts a[href^="tel"] {
+  font-size: 56px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 1px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1439px) {
+  #contacts a[href^="mailto"],
+  #contacts a[href^="tel"] {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1023px) {
+  #contacts a[href^="mailto"],
+  #contacts a[href^="tel"] {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  #contacts a[href^="mailto"],
+  #contacts a[href^="tel"] {
+    font-size: 24px;
+  }
+}

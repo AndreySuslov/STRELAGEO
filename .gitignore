@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vercel/
+*.log
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
+
+# Local source archives and QA captures are preserved outside the Git payload.
+/sources/
+/design/
+/poehali/review/
+/poehali/design-qa.md
