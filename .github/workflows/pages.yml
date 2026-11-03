@@ -22,7 +22,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - run: npm ci
         working-directory: poehali
-      - run: npm run check && npm run test:sites && npm run build
+      - run: npm run check && npm run build && npm run test:sites
         working-directory: poehali
         env:
           PAGES_BASE_PATH: /STRELAGEO/
@@ -42,3 +42,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
