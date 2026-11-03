@@ -3,17 +3,6 @@ import { Icon } from "./Icon.jsx";
 import { techStages } from "../content.js";
 export const Technology = () => {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [paused, setPaused] = React.useState(false);
-  const pausedRef = React.useRef(false);
-  const motionsRef = React.useRef([]);
-  const togglePlayback = () => {
-    const next = !paused;
-    pausedRef.current = next;
-    setPaused(next);
-    motionsRef.current.forEach((motion) =>
-      next ? motion.pause() : motion.play(),
-    );
-  };
   const glowRef = React.useRef(null);
   const progressRef = React.useRef(null);
   const [mobile, setMobile] = React.useState(() => window.innerWidth < 768);
@@ -75,9 +64,6 @@ export const Technology = () => {
       fill: "forwards",
     });
     glowMotion.onfinish = () => setActiveStep(next);
-    motionsRef.current = [glowMotion, lineMotion];
-    if (pausedRef.current)
-      motionsRef.current.forEach((motion) => motion.pause());
     return () => {
       glowMotion.onfinish = null;
       glowMotion.cancel();
@@ -117,14 +103,6 @@ export const Technology = () => {
         >{`Конвейер обработки работает автоматически: снимок проходит пять этапов и превращается в данные, с которыми можно работать`}</p>
       </div>
       <div className={`relative mt-20 md:mt-28 reveal`}>
-        <button
-          type="button"
-          className="autoplay-control tech-autoplay-control"
-          aria-pressed={paused}
-          onClick={togglePlayback}
-        >
-          {paused ? "Продолжить анимацию" : "Приостановить анимацию"}
-        </button>
         <div className="tech-stages">
           <div className="tech-rail">
             <div className={`h-px w-full bg-border`} />
