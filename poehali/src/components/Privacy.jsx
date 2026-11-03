@@ -5,7 +5,7 @@ export function Privacy() {
   }, []);
   return (
     <main className="privacy-page">
-      <a className="story-link" href="/">
+      <a className="story-link" href={import.meta.env.BASE_URL}>
         ← На главную
       </a>
       <h1>Информация о сайте и конфиденциальности</h1>

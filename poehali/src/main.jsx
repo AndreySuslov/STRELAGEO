@@ -12,7 +12,7 @@ try {
   localStorage.removeItem("strela-theme");
 } catch {}
 createRoot(document.getElementById("root")).render(
-  window.location.pathname.replace(/\/$/, "") === "/privacy" ? (
+  window.location.pathname.replace(/\/$/, "") === `${import.meta.env.BASE_URL}privacy` ? (
     <Privacy />
   ) : (
     <App />

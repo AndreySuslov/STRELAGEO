@@ -42,7 +42,7 @@ export const Footer = () => (
       className={`flex flex-col gap-2 border-t border-border py-6 text-xs text-muted-foreground md:flex-row md:justify-between`}
     >
       <span>{`© 2026 СТРЕЛА`}</span>
-      <a className="story-link" href="/privacy/">
+      <a className="story-link" href={`${import.meta.env.BASE_URL}privacy/`}>
         Информация о сайте и конфиденциальности
       </a>
       <span>Разработка Suslov</span>
